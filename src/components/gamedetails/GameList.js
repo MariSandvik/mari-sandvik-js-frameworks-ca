@@ -18,19 +18,18 @@ function GameList() {
 
     return (
         <div>
-            {game.map(function(character) {
-                console.log(character);
+            {games.map(function(game) {
+                console.log(game);
 
-                const url = "/detail/" + character.id;
+                const url = "/detail/" + game.id;
 
                 return (
                     <div className="card">
-                        <h5>{character.name}</h5>
-                        <img src={character.image} alt={character.name} />
+                        <h5>{game.name}</h5>
+                        <img src={game.image} alt={game.name} />
                         <a href={url}>View details</a>
-                        <p>{character.species}</p>
-                        <p>{character.origin.name}</p>
-                        <p>Episodes: {character.episode.length}</p>
+                        <p>{game.rating}</p>
+                        <p>{game.realeased}</p>
                     </div>
                 );
             })}

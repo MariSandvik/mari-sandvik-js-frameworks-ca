@@ -24,8 +24,6 @@ function GameDetails() {
     return (
         <div>
             <h2>{details.name}</h2>
-            <p>Gender: {details.gender}</p>
-            <p>Status: {details.status}</p>
         </div>
     );
 }
